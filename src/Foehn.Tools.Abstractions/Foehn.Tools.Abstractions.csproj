@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <Description>Shared plugin contract for Foehn tools (ITool) loaded by Foehn at startup.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Using Include="System.Text.Json" />
+    <Using Include="System.Text.Json.Serialization.Metadata" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,53 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+     <VersionPrefix>1.1.0</VersionPrefix>
+     <Description>Foehn tool plugin: searches file contents under a directory tree for a text substring.</Description>
+     <Authors>Bryn Lewis</Authors>
+     <Title>Foehn tool for searching file contents</Title>
+     <Company>devMobile Software</Company>
+     <Product>Foehn</Product>
+     <Copyright>devmobile Software (c) 2026</Copyright>
+     <PackageProjectUrl></PackageProjectUrl>
+     <RepositoryUrl>https://github.com/KiwiBryn/Foehn</RepositoryUrl>
+     <PackageTags>mistral, mistralAI, AI, Agentic</PackageTags>     
+    <BaseOutputPath>C:\Users\BrynLewis\source\repos\Foehn\src\Foehn\.Plugins</BaseOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Foehn.Tools.Abstractions\Foehn.Tools.Abstractions.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Microsoft.Extensions.Logging" />
+    <Using Include="System.Text" />
+    <Using Include="System.Text.Json.Serialization" />
+  </ItemGroup>
+
+  <!--
+    Plugins are discovered by Foehn scanning a flat "Plugins" folder for DLLs.
+    Copy only this project's own primary output there (never its dependency DLLs -
+    Foehn.Abstractions and Logging.Abstractions must stay singly-loaded, resolved
+    from the host's own bin directory, so `is ITool` checks succeed across assemblies).
+  -->
+   <Target Name="CopyToHostPlugins" AfterTargets="Build">
+      <PropertyGroup>
+         <HostPluginsDir>$(MSBuildThisFileDirectory)..\Foehn\.plugins\</HostPluginsDir>
+      </PropertyGroup>
+      <ItemGroup>
+         <PluginOutputFiles Include="$(TargetPath)" />
+         <PluginOutputFiles Include="$(TargetDir)$(TargetName).pdb" Condition="Exists('$(TargetDir)$(TargetName).pdb')" />
+      </ItemGroup>
+      <MakeDir Directories="$(HostPluginsDir)" />
+      <Copy SourceFiles="@(PluginOutputFiles)" DestinationFolder="$(HostPluginsDir)" SkipUnchangedFiles="true" />
+   </Target>
+
+
+</Project>

@@ -1,0 +1,22 @@
+<Solution>
+  <Folder Name="/Foehn.Tools.Abstractions/">
+    <Project Path="Foehn.Tools.Abstractions/Foehn.Tool.Abstractions.csproj" />
+  </Folder>
+  <Folder Name="/FoehnAIBuilder/">
+    <Project Path="Foehn/Foehn.csproj" />
+  </Folder>
+  <Project Path="Foehn.Tools.Delete/Foehn.Tools.Delete.csproj" />
+  <Project Path="Foehn.Tools.Dotnet/Foehn.Tools.Dotnet.csproj" />
+  <Project Path="Foehn.Tools.ExecuteAsync/Foehn.Tools.ExecuteAsync.csproj" />
+  <Project Path="Foehn.Tools.ExecuteSync/Foehn.Tools.ExecuteSync.csproj" />
+  <Project Path="Foehn.Tools.Mkdir/Foehn.Tools.Mkdir.csproj" />
+  <Project Path="Foehn.Tools.ReadFile/Foehn.Tools.ReadFile.csproj" />
+  <Project Path="Foehn.Tools.Rename/Foehn.Tools.Rename.csproj" />
+  <Project Path="Foehn.Tools.Rmdir/Foehn.Tools.Rmdir.csproj" />
+  <Project Path="Foehn.Tools.Scan/Foehn.Tools.Scan.csproj" />
+  <Project Path="Foehn.Tools.SearchFiles/Foehn.Tools.SearchFiles.csproj" />
+  <Project Path="Foehn.Tools.WriteFile/Foehn.Tools.WriteFile.csproj" />
+  <Project Path="FolderAndFileScanToJson/FolderAndFileScanToJson.csproj" />
+  <Project Path="MistralAI.Client.Composite/MistralAI.Client.Composite.csproj" />
+  <Project Path="MistralAI.Client.Mistral/MistralAI.Client.Mistral.csproj" />
+</Solution>

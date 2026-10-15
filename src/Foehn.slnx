@@ -1,0 +1,16 @@
+<Solution>
+  <Project Path="Foehn.Tools.Abstractions/Foehn.Tools.Abstractions.csproj" />
+  <Project Path="Foehn.Tool.Delete/Foehn.Tool.Delete.csproj" />
+  <Project Path="Foehn.Tool.Dotnet/Foehn.Tool.Dotnet.csproj" />
+  <Project Path="Foehn.Tool.ExecuteAsync/Foehn.Tool.ExecuteAsync.csproj" />
+  <Project Path="Foehn.Tool.ExecuteSync/Foehn.Tool.ExecuteSync.csproj" />
+  <Project Path="Foehn.Tool.Mkdir/Foehn.Tool.Mkdir.csproj" />
+  <Project Path="Foehn.Tool.ReadFile/Foehn.Tool.ReadFile.csproj" />
+  <Project Path="Foehn.Tool.Rename/Foehn.Tool.Rename.csproj" />
+  <Project Path="Foehn.Tool.Rmdir/Foehn.Tool.Rmdir.csproj" />
+  <Project Path="Foehn.Tool.Scan/Foehn.Tool.Scan.csproj" />
+  <Project Path="Foehn.Tool.SearchFiles/Foehn.Tool.SearchFiles.csproj" />
+  <Project Path="Foehn.Tool.WriteFile/Foehn.Tool.WriteFile.csproj" />
+  <Project Path="Foehn/Foehn.csproj" />
+  <Project Path="MistralAI.Client.Composite/MistralAI.Client.Composite.csproj" />
+</Solution>
